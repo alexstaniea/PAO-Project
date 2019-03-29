@@ -1,6 +1,6 @@
 package com.fmi.project.models;
 
-public class Employee {
+public class Employee extends User {
 
     private Integer id;
     private String name;
@@ -8,7 +8,8 @@ public class Employee {
     private Contract contract;
 
 
-    public Employee(Integer id, String name, Salary salary, Contract contract) {
+    public Employee(String username, String password, Integer id, String name, Salary salary, Contract contract) {
+        super(username, password);
         this.id = id;
         this.name = name;
         this.salary = salary;

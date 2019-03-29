@@ -6,8 +6,8 @@ public class Intern extends Employee {
     private int age;
     private int graduationyear;
 
-    public Intern(Integer id, String name, Salary salary, Contract contract, String yearofstudy, int age, int graduationyear) {
-        super(id, name, salary, contract);
+    public Intern(String username, String password, Integer id, String name, Salary salary, Contract contract, String yearofstudy, int age, int graduationyear) {
+        super(username, password, id, name, salary, contract);
         this.yearofstudy = yearofstudy;
         this.age = age;
         this.graduationyear = graduationyear;

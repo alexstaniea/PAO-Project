@@ -4,8 +4,8 @@ public class Manager extends Employee{
 
     private int nrofsubordinates;
 
-    public Manager(Integer id, String name, Salary salary, Contract contract, int nrofsubordinates) {
-        super(id, name, salary, contract);
+    public Manager(String username, String password, Integer id, String name, Salary salary, Contract contract, int nrofsubordinates) {
+        super(username, password, id, name, salary, contract);
         this.nrofsubordinates = nrofsubordinates;
     }
 

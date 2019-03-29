@@ -27,10 +27,10 @@ public class EmployeeService {
         Contract c1 = new Contract(d1,d2,"janitor",false);
         Bestlanguage b = new Bestlanguage("c++",2);
 
-        listOfEmployees[0] = new Employee(1,"Alex Staniea",s1, c1);
-        listOfEmployees[1] = new Juniordev(2,"Alin Dima", s1, c1, b,"front-end developer");
-        listOfEmployees[2] = new Seniordev(3,"Vlad Ivascu", s1, c1, b,"back-end developer",150);
-        listOfEmployees[3] = new Ceo(4,"Vlad Secatureanu", s1, c1,23,234);
+        listOfEmployees[0] = new Employee("alex","123",1,"Alex Staniea",s1, c1);
+        listOfEmployees[1] = new Juniordev("alex","123",2,"Alin Dima", s1, c1, b,"front-end developer");
+        listOfEmployees[2] = new Seniordev("alex","123",3,"Vlad Ivascu", s1, c1, b,"back-end developer",150);
+        listOfEmployees[3] = new Ceo("alex","123",4,"Vlad Secatureanu", s1, c1,23,234);
     }
 
     public static EmployeeService getInstance() {

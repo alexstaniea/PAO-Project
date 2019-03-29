@@ -1,6 +1,7 @@
 package com.fmi.project;
 
 
+import static com.fmi.project.services.ClientService.getClientByName;
 import static com.fmi.project.services.EmployeeService.*;
 
 public class Main {
@@ -12,5 +13,7 @@ public class Main {
         System.out.println(a);
 
         AscendingId();
+
+        System.out.println("\n\n" + getClientByName("Vlad Ivascu"));
     }
 }

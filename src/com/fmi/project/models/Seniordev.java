@@ -4,8 +4,8 @@ public class Seniordev extends Juniordev {
 
     private int nrofknownlanguages;
 
-    public Seniordev(Integer id, String name, Salary salary, Contract contract, Bestlanguage bestlanguage, String title, int nrofknownlanguages) {
-        super(id, name, salary, contract, bestlanguage, title);
+    public Seniordev(String username, String password, Integer id, String name, Salary salary, Contract contract, Bestlanguage bestlanguage, String title, int nrofknownlanguages) {
+        super(username, password, id, name, salary, contract, bestlanguage, title);
         this.nrofknownlanguages = nrofknownlanguages;
     }
 
