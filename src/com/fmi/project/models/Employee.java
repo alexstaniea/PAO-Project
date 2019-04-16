@@ -1,6 +1,6 @@
 package com.fmi.project.models;
 
-public class Employee extends User {
+public class Employee  extends User{
 
     private Integer id;
     private String name;
@@ -47,4 +47,6 @@ public class Employee extends User {
     public void setContract(Contract contract) {
         this.contract = contract;
     }
+
+
 }

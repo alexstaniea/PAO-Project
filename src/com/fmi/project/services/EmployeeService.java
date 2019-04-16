@@ -52,6 +52,22 @@ public class EmployeeService {
         for(Employee aux : l1) {
             System.out.println(aux.getName() + "; id: " + aux.getId());
         }
+
+        Map<Integer, Employee> IndexedEmployees= new HashMap<Integer, Employee>();
+        IndexedEmployees.put(0,listOfEmployees[0]);
+        IndexedEmployees.put(1,listOfEmployees[1]);
+        IndexedEmployees.put(2,listOfEmployees[2]);
+        IndexedEmployees.put(3,listOfEmployees[3]);
+
+        System.out.println("\n\nThe indexed employees are: ");
+
+        Iterator it = IndexedEmployees.entrySet().iterator();
+        while(it.hasNext()) {
+            Map.Entry pair = (Map.Entry)it.next();
+            System.out.println(pair.getKey() + " = " + pair.getValue());
+            it.remove();
+        }
+
     }
 
     public static Employee getEmployeeByName(String name) {
