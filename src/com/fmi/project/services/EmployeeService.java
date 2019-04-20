@@ -2,6 +2,7 @@ package com.fmi.project.services;
 
 import com.fmi.project.models.*;
 
+import java.time.ZonedDateTime;
 import java.util.*;
 
 class Sortbyid implements Comparator<Employee>
@@ -68,9 +69,19 @@ public class EmployeeService {
             it.remove();
         }
 
+        System.out.println("\n\n");
+
     }
 
     public static Employee getEmployeeByName(String name) {
+
+        StringBuilder stringBuilder = new StringBuilder("");
+        stringBuilder.append("getEmployeeByName")
+                .append(",").append(ZonedDateTime.now());
+
+
+        FileTextService.getInstance().writeTextToFile(stringBuilder.toString(),
+                "C:\\Users\\Alex\\Desktop\\Proiect PAO\\files\\audit.csv");
 
         for(Employee employee : listOfEmployees) {
             if(employee.getName().equals(name)) {
@@ -82,6 +93,14 @@ public class EmployeeService {
 
     public static Employee getEmployeeById(Integer employeeId) {
 
+        StringBuilder stringBuilder = new StringBuilder("");
+        stringBuilder.append("getEmployeeById")
+                .append(",").append(ZonedDateTime.now());
+
+
+        FileTextService.getInstance().writeTextToFile(stringBuilder.toString(),
+                "C:\\Users\\Alex\\Desktop\\Proiect PAO\\files\\audit.csv");
+
         for(Employee employee : listOfEmployees) {
             if(employee.getId().equals(employeeId)) {
                 return employee;
@@ -91,6 +110,14 @@ public class EmployeeService {
     }
 
     public static Salary getSalaryByName(String name) {
+
+        StringBuilder stringBuilder = new StringBuilder("");
+        stringBuilder.append("getSalaryByName")
+                .append(",").append(ZonedDateTime.now());
+
+
+        FileTextService.getInstance().writeTextToFile(stringBuilder.toString(),
+                "C:\\Users\\Alex\\Desktop\\Proiect PAO\\files\\audit.csv");
 
         for(Employee employee : listOfEmployees) {
             if(employee.getName().equals(name)) {
@@ -102,6 +129,14 @@ public class EmployeeService {
 
     public static Salary getSalaryById(Integer employeeId) {
 
+        StringBuilder stringBuilder = new StringBuilder("");
+        stringBuilder.append("getSalaryById")
+                .append(",").append(ZonedDateTime.now());
+
+
+        FileTextService.getInstance().writeTextToFile(stringBuilder.toString(),
+                "C:\\Users\\Alex\\Desktop\\Proiect PAO\\files\\audit.csv");
+
         for(Employee employee : listOfEmployees) {
             if(employee.getId().equals(employeeId)) {
                 return employee.getSalary();
@@ -112,6 +147,16 @@ public class EmployeeService {
 
     public static boolean getRelocationStatus(String name) {
 
+
+        StringBuilder stringBuilder = new StringBuilder("");
+        stringBuilder.append("getRelocationStatus")
+                .append(",").append(ZonedDateTime.now());
+
+
+        FileTextService.getInstance().writeTextToFile(stringBuilder.toString(),
+                "C:\\Users\\Alex\\Desktop\\Proiect PAO\\files\\audit.csv");
+
+
         for(Employee employee : listOfEmployees) {
             if(employee.getName().equals(name)) {
                 return employee.getContract().getRelocation();
@@ -121,7 +166,15 @@ public class EmployeeService {
         return false;
     }
 
-    public static boolean getRelocationStatus(Integer employeeId) {
+    public static boolean getRelocationStatusById(Integer employeeId) {
+
+        StringBuilder stringBuilder = new StringBuilder("");
+        stringBuilder.append("getRelocationStatusById")
+                .append(",").append(ZonedDateTime.now());
+
+
+        FileTextService.getInstance().writeTextToFile(stringBuilder.toString(),
+                "C:\\Users\\Alex\\Desktop\\Proiect PAO\\files\\audit.csv");
 
         for(Employee employee : listOfEmployees) {
             if(employee.getId().equals(employeeId)) {
@@ -135,6 +188,14 @@ public class EmployeeService {
 
     public static String getPositionByName(String name) {
 
+        StringBuilder stringBuilder = new StringBuilder("");
+        stringBuilder.append("getPositionByName")
+                .append(",").append(ZonedDateTime.now());
+
+
+        FileTextService.getInstance().writeTextToFile(stringBuilder.toString(),
+                "C:\\Users\\Alex\\Desktop\\Proiect PAO\\files\\audit.csv");
+
         for(Employee employee : listOfEmployees) {
             if(employee.getName().equals(name)) {
                 return employee.getContract().getPosition();
@@ -144,6 +205,14 @@ public class EmployeeService {
     }
 
     public static String getPositionById(Integer employeeId) {
+
+        StringBuilder stringBuilder = new StringBuilder("");
+        stringBuilder.append("getPositionById")
+                .append(",").append(ZonedDateTime.now());
+
+
+        FileTextService.getInstance().writeTextToFile(stringBuilder.toString(),
+                "C:\\Users\\Alex\\Desktop\\Proiect PAO\\files\\audit.csv");
 
         for(Employee employee : listOfEmployees) {
             if(employee.getId().equals(employeeId)) {
@@ -156,6 +225,14 @@ public class EmployeeService {
 
     public static Date getStartdateByName(String name) {
 
+        StringBuilder stringBuilder = new StringBuilder("");
+        stringBuilder.append("getStartdateByName")
+                .append(",").append(ZonedDateTime.now());
+
+
+        FileTextService.getInstance().writeTextToFile(stringBuilder.toString(),
+                "C:\\Users\\Alex\\Desktop\\Proiect PAO\\files\\audit.csv");
+
         for(Employee employee : listOfEmployees) {
             if(employee.getName().equals(name)) {
                 return employee.getContract().getStartFrom();
@@ -165,6 +242,14 @@ public class EmployeeService {
     }
 
     public static Date getStartdateById(Integer employeeId) {
+
+        StringBuilder stringBuilder = new StringBuilder("");
+        stringBuilder.append("getStartdateById")
+                .append(",").append(ZonedDateTime.now());
+
+
+        FileTextService.getInstance().writeTextToFile(stringBuilder.toString(),
+                "C:\\Users\\Alex\\Desktop\\Proiect PAO\\files\\audit.csv");
 
         for(Employee employee : listOfEmployees) {
             if(employee.getId().equals(employeeId)) {
@@ -176,6 +261,14 @@ public class EmployeeService {
 
     public static Date getEnddateByName(String name) {
 
+        StringBuilder stringBuilder = new StringBuilder("");
+        stringBuilder.append("getEnddatebyName")
+                .append(",").append(ZonedDateTime.now());
+
+
+        FileTextService.getInstance().writeTextToFile(stringBuilder.toString(),
+                "C:\\Users\\Alex\\Desktop\\Proiect PAO\\files\\audit.csv");
+
         for(Employee employee : listOfEmployees) {
             if(employee.getName().equals(name)) {
                 return employee.getContract().getEndFrom();
@@ -185,6 +278,14 @@ public class EmployeeService {
     }
 
     public static Date getEnddateById(Integer employeeId) {
+
+        StringBuilder stringBuilder = new StringBuilder("");
+        stringBuilder.append("getEndDateById")
+                .append(",").append(ZonedDateTime.now());
+
+
+        FileTextService.getInstance().writeTextToFile(stringBuilder.toString(),
+                "C:\\Users\\Alex\\Desktop\\Proiect PAO\\files\\audit.csv");
 
         for(Employee employee : listOfEmployees) {
             if(employee.getId().equals(employeeId)) {
