@@ -6,6 +6,7 @@ import com.fmi.project.models.Contract;
 import com.fmi.project.models.Project;
 import com.fmi.project.models.User;
 import com.fmi.project.services.FileTextService;
+import java.sql.*;
 
 import static com.fmi.project.services.ClientService.getClientByName;
 import static com.fmi.project.services.EmployeeService.*;
@@ -50,5 +51,7 @@ public class Main {
 
         FileTextService.getInstance().writeTextToFile(stringBuilder.toString(),
                 "C:\\Users\\Alex\\Desktop\\Proiect PAO\\files\\user.csv");
+
+
     }
 }
